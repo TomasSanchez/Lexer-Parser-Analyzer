@@ -1,9 +1,7 @@
-
 Gramatica Sintactica
 
-
 Programa → 
-|Declaracion “;” Sentencia
+| Declaracion “;” Sentencia
 | Sentencia
 
 Declaracion → 
@@ -35,24 +33,54 @@ ListaIdentificadores →
 
 Gramática Léxica
 
-Op → Relop | Mulop | Sumop
+Op → 
+| Relop 
+| Mulop 
+| Sumop
 
-Relop → “== “| “>” |”<” | “>=” | “<= “ | “!=”
+Relop → 
+| “== “
+| “>” 
+| ”<” 
+| “>=” 
+| “<= “ 
+| “!=”
 
-Mulop → “*“| “/” |”mod” | “and”
+Mulop → 
+| “*“
+| “/” 
+| ”mod” 
+| “and”
 
-Sumop → “+“| “-” |”or”
+Sumop → 
+| “+“
+| “-” 
+| ”or”
 
-Numero → ListaDigito | ListaDigito "." ListaDigito
+Numero → 
+| ListaDigito 
+| ListaDigito "." ListaDigito
 
-ListaDigito → Digito | Digito ListaDigito
+ListaDigito → 
+| Digito 
+| Digito ListaDigito
 
-Literal → “’” ListaSimbolos “’”
+Literal → 
+| “’” ListaSimbolos “’”
 
-Identificador → Letra | Letra ListaSimbolos
+Identificador → 
+| Letra 
+| Letra ListaSimbolos
 
-ListaSimbolos → Letra | Digito | Letra ListaSimbolos | Digito ListaSimbolos
+ListaSimbolos →
+| Letra 
+| Digito 
+| Letra ListaSimbolos 
+| Digito ListaSimbolos
 
-Letra → “a”| ... |“z” | “A”| ... |“Z”
+Letra →
+| “a” | ... |“z” 
+| “A”| ... |“Z”
 
-Digito → “0”| ... |“9”
+Digito →
+| “0”| ... |“9”

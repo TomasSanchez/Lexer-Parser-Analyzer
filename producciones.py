@@ -21,6 +21,7 @@ terminales = {
     ';':               lexer.Token(lexer.TokenKind.SEMICOLON, ';')
 }
 
+#left recursion already removed.
 producciones = {
     'Programa': [ 
         ['Declaracion',terminales[';'], 'Sentencia'],
