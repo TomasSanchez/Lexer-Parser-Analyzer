@@ -1,0 +1,58 @@
+
+Gramatica Sintactica
+
+
+Programa → 
+|Declaracion “;” Sentencia
+| Sentencia
+
+Declaracion → 
+| Declaracion “;” Declaracion
+| Sentencia
+
+Sentencia → 
+| Sentencia “;” Sentencia
+| Identificador “:=” Expresion
+| ”si” Expresion “entonces“ Sentencia “sino” Sentencia
+| ”si” Expresion “entonces“ Sentencia
+| “mientras” Expresion “hacer” Sentencia
+
+Expresion → 
+| Literal
+| Numero
+| Identificador
+| Expresion Op Expresion
+| Expresion “[“ Expresion ”]”
+| Expresion “(“ Expresion ”)”
+| “aceptar” Literal Identificador
+| “mostrar” Literal ListaIdentificadores
+
+ListaIdentificadores → 
+| Identificador
+| Identificador “,” ListaIdentificadores
+
+
+
+Gramática Léxica
+
+Op → Relop | Mulop | Sumop
+
+Relop → “== “| “>” |”<” | “>=” | “<= “ | “!=”
+
+Mulop → “*“| “/” |”mod” | “and”
+
+Sumop → “+“| “-” |”or”
+
+Numero → ListaDigito | ListaDigito "." ListaDigito
+
+ListaDigito → Digito | Digito ListaDigito
+
+Literal → “’” ListaSimbolos “’”
+
+Identificador → Letra | Letra ListaSimbolos
+
+ListaSimbolos → Letra | Digito | Letra ListaSimbolos | Digito ListaSimbolos
+
+Letra → “a”| ... |“z” | “A”| ... |“Z”
+
+Digito → “0”| ... |“9”
